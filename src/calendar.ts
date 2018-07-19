@@ -3,13 +3,6 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { CalendarService } from './calendar.service';
 
-export interface IEvent {
-    allDay: boolean;
-    endTime: Date;
-    startTime: Date;
-    title: string;
-}
-
 export interface IRange {
     startTime: Date;
     endTime: Date;
