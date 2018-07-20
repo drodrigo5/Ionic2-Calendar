@@ -1,19 +1,4 @@
-import { Injectable } from '@angular/core';
-import { Observable } from "rxjs/Observable";
-import { Subject} from "rxjs/Subject";
 
-import { ICalendarComponent, IView, CalendarMode, QueryMode } from './calendar';
-
-@Injectable()
-export class CalendarService {
-    queryMode: QueryMode;
-    currentDateChangedFromParent$: Observable<Date>;
-    currentDateChangedFromChildren$: Observable<Date>;
-    eventSourceChanged$: Observable<void>;
-
-    private _currentDate: Date;
-    private currentDateChangedFromParent = new Subject<Date>();
-    private currentDateChangedFromChildren = new Subject<Date>();
     private eventSourceChanged = new Subject<void>();
 
     constructor() {
